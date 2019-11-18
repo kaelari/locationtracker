@@ -6769,7 +6769,7 @@ GameObject:
   - component: {fileID: 309034151}
   - component: {fileID: 309034153}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: veros chainwhip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13998,7 +13998,7 @@ GameObject:
   - component: {fileID: 647012186}
   - component: {fileID: 647012188}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: alba top floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16305,7 +16305,7 @@ GameObject:
   - component: {fileID: 744877293}
   - component: {fileID: 744877295}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: ondol laurels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22340,7 +22340,7 @@ GameObject:
   - component: {fileID: 1059476240}
   - component: {fileID: 1059476239}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: veros dagger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23614,7 +23614,7 @@ GameObject:
   - component: {fileID: 1114994244}
   - component: {fileID: 1114994243}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: alba second floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23861,7 +23861,7 @@ GameObject:
   - component: {fileID: 1123950335}
   - component: {fileID: 1123950337}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: ondol morning star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35324,7 +35324,7 @@ GameObject:
   - component: {fileID: 1744774516}
   - component: {fileID: 1744774518}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: alba crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40218,7 +40218,7 @@ MonoBehaviour:
   jova1: {fileID: 2088835857}
   jova2: {fileID: 1843997789}
   jova3: {fileID: 739769897}
-  veros1: {fileID: 309034153}
+  veros1: {fileID: 1059476239}
   veros2: {fileID: 309034153}
   flame: {fileID: 1067931981}
   aljiba1: {fileID: 1833008212}
@@ -40226,7 +40226,7 @@ MonoBehaviour:
   aljiba3: {fileID: 1564151406}
   aljiba4: {fileID: 1679406984}
   alba1: {fileID: 1744774518}
-  alba2: {fileID: 647012188}
+  alba2: {fileID: 1114994243}
   alba3: {fileID: 647012188}
   duck: {fileID: 357887780}
   ondol1: {fileID: 744877295}
@@ -40247,7 +40247,9 @@ MonoBehaviour:
   laruba2: {fileID: 1616316650}
   laruba3: {fileID: 1790243426}
   laruba4: {fileID: 349612596}
-  whip: 1
+  garlic: 0
+  laurels: 0
+  whip: 0
   writing: 0
 --- !u!114 &2002980344
 MonoBehaviour:

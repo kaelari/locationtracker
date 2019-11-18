@@ -262,34 +262,37 @@ public class autoupdate : MonoBehaviour
 
         results = ReadMemory((IntPtr)(offset + 0x004D), 1, out bytesread);
         //UnityEngine.Debug.Log("Garlic: "+results[0].ToString());
-        if (results[0]> 0 && controller.olditems["garlic"] == false)
+        if (results[0]> 0 && controller.garlic < results[0])
         {
-            controller.curitems["garlic"] = true;
+            //we have more garlic now
+            controller.garlic = results[0];
             string where = findlocation();
             controller.record(where, "garlic");
         }
-        else if (results[0] > 0)
+        else if (results[0] != controller.garlic)
         {
-
+            //we threw some garlic
+            controller.garlic = results[0];
         }
         else
         {
-            controller.olditems["garlic"] = false;
+            
         }
         results = ReadMemory((IntPtr)(offset + 0x004C), 1, out bytesread);
         //UnityEngine.Debug.Log("Laurels: " + results[0].ToString());
-        if (results[0] > 0 && controller.olditems["laurels"] == false)
+        if (results[0] > 0 && controller.laurels < results[0])
         {
-            controller.curitems["laurels"] = true;
+            //we have more laurels now
+            controller.laurels = results[0];
             string where = findlocation();
             controller.record(where, "laurels");
         }
-        else if (results[0] > 0)
+        else if (results[0] != controller.laurels)
         {
-
+            controller.laurels = results[0];
         }else 
         {
-            controller.olditems["laurels"] = false;
+            
         }
 
 

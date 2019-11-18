@@ -38,7 +38,8 @@ public class Controller : MonoBehaviour
     public Dropdown laruba2;
     public Dropdown laruba3;
     public Dropdown laruba4;
-
+    public int garlic = 0;
+    public int laurels = 0;
     public Dictionary<string, bool> curitems = new Dictionary<string, bool>();
     public Dictionary<string, bool> olditems = new Dictionary<string, bool>();
     public Dictionary<string, int> selected = new Dictionary<string, int>();
