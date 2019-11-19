@@ -7394,7 +7394,7 @@ GameObject:
   - component: {fileID: 349612598}
   - component: {fileID: 349612596}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: carmilla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11713,7 +11713,7 @@ GameObject:
   - component: {fileID: 564665550}
   - component: {fileID: 564665552}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: laruba merchant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32450,7 +32450,7 @@ GameObject:
   - component: {fileID: 1616316648}
   - component: {fileID: 1616316650}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: laruba laurels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35940,7 +35940,7 @@ GameObject:
   - component: {fileID: 1790243424}
   - component: {fileID: 1790243426}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: laruba orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40245,8 +40245,8 @@ MonoBehaviour:
   flamewhip: {fileID: 1843107210}
   laruba1: {fileID: 564665552}
   laruba2: {fileID: 1616316650}
-  laruba3: {fileID: 1790243426}
-  laruba4: {fileID: 349612596}
+  laruba3: {fileID: 349612596}
+  laruba4: {fileID: 1790243426}
   garlic: 0
   laurels: 0
   whip: 0
