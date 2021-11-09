@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     public Dropdown jova1;
     public Dropdown jova2;
     public Dropdown jova3;
@@ -38,27 +39,96 @@ public class Controller : MonoBehaviour
     public Dropdown laruba2;
     public Dropdown laruba3;
     public Dropdown laruba4;
+    public TextMeshProUGUI laurelcount;
+    public TextMeshProUGUI whipcount;
+    public TextMeshProUGUI garliccount;
+    public TextMeshProUGUI stakecount;
+    public TextMeshProUGUI crystalcount;
+
     public int garlic = 0;
     public int laurels = 0;
     public Dictionary<string, bool> curitems = new Dictionary<string, bool>();
     public Dictionary<string, bool> olditems = new Dictionary<string, bool>();
     public Dictionary<string, int> selected = new Dictionary<string, int>();
-
+    public Dictionary<string, Dropdown> dropdowns = new Dictionary<string, Dropdown>();
+    
     public int whip = 0;
     public int writing = 0;
 
+    public int crystalnum = 3;
+    public int garlicnum = 2;
+    public int laurelnum = 5;
+    public int whipnum = 4;
+    public int stakenum = 5;
+
+    public void updatecounts () 
+    {
+        int laurels = 18;
+        int crystal = 3;
+        int whips = 2;
+        int garlic = 19;
+        int stake = 17;
+        int crystalcur = crystalnum;
+        int laurelscur = laurelnum;
+        int whipscur = whipnum;
+        int stakecur = stakenum;
+        int garliccur = garlicnum;
+
+        foreach (Dropdown item in dropdowns.Values )
+        {
+            if (item.value == laurels)
+            {
+                laurelscur -= 1;
+            }
+
+            if (item.value == crystal)
+            {
+                crystalcur -= 1;
+            }
+            if (item.value == whips )
+            {
+                whipscur -= 1;
+            }
+            if (item.value == stake)
+            {
+                stakecur -= 1;
+            }
+            if (item.value == garlic)
+            {
+                garliccur -= 1;
+            }
+
+        }
+
+
+        stakecount.text = stakecur.ToString();
+        garliccount.text = garliccur.ToString();
+        whipcount.text = whipscur.ToString();
+        laurelcount.text = laurelscur.ToString();
+        crystalcount.text = crystalcur.ToString();
+
+    }
 
     void updatedisplay(Dropdown dd, string item)
     {
+        if (item == "checked")
+        {
+            if (dd.value > 0)
+            {
+                return;
+            }
+        }
         if (dd.value <= 1)
         {
             dd.value = selected[item];
             dd.RefreshShownValue();
+
         }
     }
     public void record (string where, string item)
     {
         Debug.Log("trying to update where item was found:" +where +item);
+        
         if (where == "jova1")
         {
             updatedisplay(jova1, item);
@@ -197,7 +267,7 @@ public class Controller : MonoBehaviour
         selected["whip"] = 2;
         selected["crystal"] = 3;
         selected["cross"] = 4;
-        selected["bag"] = 4;
+        selected["bag"] = 5;
         selected["rib"] = 6;
         selected["eyeball"] = 7;
         selected["heart"] = 8;
@@ -233,6 +303,38 @@ public class Controller : MonoBehaviour
         olditems["cross"] = false;
         olditems["bag"] = false;
 
+        dropdowns["jova1"] = jova1;
+        dropdowns["jova2"] = jova2;
+        dropdowns["jova3"] = jova3;
+        dropdowns["veros1"] = veros1;
+        dropdowns["veros2"] = veros2;
+        dropdowns["flame"] = flame;
+        dropdowns["aljiba1"] = aljiba1;
+        dropdowns["aljiba2"] = aljiba2;
+        dropdowns["aljiba3"] = aljiba3;
+        dropdowns["aljiba4"] = aljiba4;
+        dropdowns["alba1"] = alba1;
+        dropdowns["alba2"] = alba2;
+        dropdowns["alba3"] = alba3;
+        dropdowns["duck"] = duck;
+        dropdowns["ondol1"] = ondol1;
+        dropdowns["ondol2"] = ondol2;
+        dropdowns["berkley1"] = berkley1;
+        dropdowns["berkley2"] = berkley2;
+        dropdowns["rover1"] = rover1;
+        dropdowns["rover2"] = rover2;
+        dropdowns["diamond"] = diamond;
+        dropdowns["brahm1"] = brahm1;
+        dropdowns["brahm2"] = brahm2;
+        dropdowns["death"] = death;
+        dropdowns["doina"] = doina;
+        dropdowns["bodley1"] = bodley1;
+        dropdowns["bodley2"] = bodley2;
+        dropdowns["flamewhip"] = flamewhip;
+        dropdowns["laruba1"] = laruba1;
+        dropdowns["laruba2"] = laruba2;
+        dropdowns["laruba3"] = laruba3;
+        dropdowns["laruba4"] = laruba4;
 
     }
   
@@ -247,5 +349,8 @@ public class Controller : MonoBehaviour
             }
         }
         curitems.Clear();
+
+        updatecounts();
+
     }
 }

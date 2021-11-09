@@ -92,7 +92,8 @@ public class autoupdate : MonoBehaviour
         offset = BitConverter.ToUInt32(ReadMemory((IntPtr)(paddress + (uint)ReadProcess.Modules[0].BaseAddress), 4, out int bytesread), 0);
 
         byte[] results = ReadMemory((IntPtr)(offset + 0x91), 2, out bytesread);
-
+        byte[] textbeingprinted = ReadMemory((IntPtr)(offset + 0x007000), 20, out bytesread);
+        
         byte[] resultstest = ReadMemory((IntPtr)(offset + 0x007D), 1, out bytesread);
         if (resultstest[0] != controller.writing)
         {
@@ -100,6 +101,7 @@ public class autoupdate : MonoBehaviour
             if (resultstest[0] == 0x3c)
             {
                 UnityEngine.Debug.Log("text displayed");
+                UnityEngine.Debug.Log(BitConverter.ToString((textbeingprinted)));
 
                 controller.record(findlocation(), "checked");
             }
@@ -113,6 +115,10 @@ public class autoupdate : MonoBehaviour
             {
                 UnityEngine.Debug.Log("got red crystal");
                 controller.curitems["rcrystal"] = true;
+                
+                string where = findlocation();
+                controller.record(where, "crystal");
+
             }
             else if (controller.olditems["wcrystal"] == false)
             {
